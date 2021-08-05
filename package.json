@@ -14,6 +14,9 @@
     },
     "scripts": {
         "build": "node bin/build.js",
-        "start": "node bin/run.js"
+        "start": "node bin/run.js",
+        "watch": "npm run watch:server & npm run watch:client",
+        "watch:client": "nodemon bin/build.js --watch client -e js,css,html,json",
+        "watch:server": "nodemon server/js/main.js --watch server"
     }
 }
